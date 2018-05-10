@@ -1,0 +1,27 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "```js // render the main character var Renderer = require('renderer') var canvas = document.createElement('canvas') // finite state machine for events dispatched by blocks var Store = require('vm') // blocks, with a panel var { BlockPanel, Step, Turn, Jump } = require('blocks') // set the blocks for this instance of the panel var panel = BlockPanel({   'step': Step,   'turn': Turn,   'jump': Jump }) // create the virtual machine for this specific set of blocks var vm = Store(panel)",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo index.js -H 0.0.0.0 -p 8080 -- -t sheetify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dragula": "^3.7.2",
+    "nanocomponent": "^6.5.2",
+    "nanohtml": "^1.2.3",
+    "nanostate": "^1.2.1",
+    "phaser": "^3.6.0",
+    "tachyons": "^4.9.1"
+  },
+  "devDependencies": {
+    "budo": "^11.2.0",
+    "choo": "^6.11.0-preview1",
+    "sheetify": "^7.3.2",
+    "stringify": "^5.2.0"
+  }
+}
